@@ -1,0 +1,13 @@
+services:
+    jms_aws.base:
+        abstract: true
+        file: %jms_aws.sdk_file%
+        arguments: [%jms_aws.key%, %jms_aws.secret%]
+
+    jms_aws.s3:
+        parent: jms_aws.base
+        class: AmazonS3
+        
+    jms_aws.cloudfront:
+        parent: jms_aws.base
+        class: AmazonCloudFront
