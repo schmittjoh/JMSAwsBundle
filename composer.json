@@ -1,3 +1,12 @@
 {
-    "name": "jms/aws-bundle"
+    "name": "jms/aws-bundle",
+
+    "require": {
+        "amazonwebservices/aws-sdk-for-php": "1.5.*"
+    },
+
+    "autoload": {
+        "psr-0": { "JMS\\AwsBundle": "" }
+    },
+    "target-dir": "JMS/AwsBundle"
 }
