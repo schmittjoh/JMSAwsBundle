@@ -19,7 +19,6 @@ class JMSAwsExtension extends Extension
 
         $container->setParameter('jms_aws.key', $config['key']);
         $container->setParameter('jms_aws.secret', $config['secret']);
-        $container->setParameter('jms_aws.sdk_file', $config['sdk_file']);
 
         $loader = new YamlFileLoader($container, new FileLocator(array(__DIR__.'/../Resources/config')));
         $loader->load('services.yml');

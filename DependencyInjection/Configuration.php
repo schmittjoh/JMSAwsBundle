@@ -14,7 +14,6 @@ class Configuration implements ConfigurationInterface
         $tb
         ->root('jms_aws', 'array')
             ->children()
-                ->scalarNode('sdk_file')->defaultValue('%kernel.root_dir%/../vendor/aws-sdk/sdk.class.php')->end()
                 ->scalarNode('key')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('secret')->isRequired()->cannotBeEmpty()->end()
             ->end()
